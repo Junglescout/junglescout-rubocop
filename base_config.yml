@@ -1,0 +1,211 @@
+Metrics/LineLength:
+  Max: 120 #Default 80
+  Exclude:
+    - 'spec/**/*' # indented statements will go over 100
+
+Metrics/ClassLength:
+  CountComments: false  # count full line comments?
+  Max: 1000 # Default 100
+
+Metrics/ModuleLength:
+  CountComments: false  # count full line comments?
+  Max: 1000 # Default 100
+
+Metrics/MethodLength:
+  CountComments: false  # count full line comments?
+  Max: 30 # Default 10
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+    - 'models/**/*' # Scopes may be large
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+Layout/SpaceInLambdaLiteral:
+  # a = -> (x, y) { x + y } || a = ->(x, y) { x + y } is okay
+  Enabled: false
+
+Lint/HandleExceptions:
+  # def some_method
+  #   do_something
+  # rescue
+  #   # do nothing
+  # end
+  Enabled: false
+
+Naming/UncommunicativeMethodParamName:
+  # def foo(num1, num2)
+  #   num1 * num2
+  # end
+  AllowNamesEndingInNumbers: true
+
+Performance/RedundantMerge:
+  # hash.merge!(a: 1, b: 2)
+  Enabled: false
+
+Performance/TimesMap:
+  # 9.times.map do |i|
+  #   i.to_s
+  # end
+  Enabled: false
+
+Performance/UnfreezeString:
+  Enabled: false
+
+Rails/Blank:
+  # foo.nil? || foo.empty? is acceptable
+  NilOrEmpty: true
+
+Rails/Date:
+  # Date.today is acceptable
+  Enabled: false
+
+Rails/Output:
+  # Sometimes you want puts statements to output to console
+  Enabled: false
+
+Rails/ReversibleMigration:
+  Enabled: false
+
+Rails/SkipsModelValidations:
+  # Skipping Validation is perfectly fine and required for performance reasons in many cases
+  Enabled: false
+
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - development
+    - test
+    - staging
+    - review
+
+Style/AndOr:
+  # Sometimes using and is requied in Rails: do_something and return
+  EnforcedStyle: conditionals
+
+Style/AsciiComments:
+  # Allow comments in Non Ascii
+  Enabled: false
+
+Style/BlockDelimiters:
+  # { ... } multi-line blocks
+  # Allow in spec files
+  # words.each { |word|
+  #   word.flip.flop
+  # }.join("-")
+  EnforcedStyle: braces_for_chaining
+  Exclude:
+    - 'spec/**/*'
+
+Style/RescueStandardError:
+  # In some cases we need to rescue an unknown error, log it and reraise
+  #   rescue => e
+  #     NotifySomeOne(e)
+  #     raise e
+  #   end
+  Enabled: false #Default: true
+
+Style/ReturnNil:
+  # Nil is a perfectly fine response for some rescue use cases
+  #   def something
+  #     some code
+  #   rescue
+  #   end
+  Enabled: false #Default: true
+
+Style/ClassAndModuleChildren:
+  # Basically there are two different styles:
+  #
+  # `nested` - have each child on a separate line
+  #   class Foo
+  #     class Bar
+  #     end
+  #   end
+  #
+  # `compact` - combine definitions as much as possible
+  #   class Foo::Bar
+  #   end
+  #
+  # The compact style is only forced, for classes or modules with one child.
+  EnforcedStyle: nested #Default nested
+
+Style/Lambda:
+  # Using -> or lamda are acceptable
+  Enabled: false #Default true
+
+Style/BracesAroundHashParameters:
+  # some_method(x, y, {a: 1, b: 2}) OR some_method(x, y, a: 1, b: 2)  => is acceptable
+  Enabled: false #Default true
+
+Style/NegatedIf:
+  # !if something => is acceptable
+  Enabled: false
+
+Style/WordArray:
+  # ['first', 'second'] => is acceptable
+  Enabled: false
+
+Style/SymbolArray:
+  # [:first, :second] => is acceptable
+  Enabled: false
+
+Style/EmptyCaseCondition:
+  # case
+  # when something
+  # Is acceptable
+  Enabled: false
+
+Style/EmptyLiteral:
+  Enabled: false
+
+Style/FormatString:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Exclude:
+    - 'Gemfile'
+    - 'Rakefile'
+    - 'db/**/*'
+    - 'spec/**/*'
+
+Style/HashSyntax:
+  EnforcedStyle: no_mixed_keys
+
+Style/IfUnlessModifier:
+  # Both are acceptable
+  # if condition
+  #   do_stuff(bar)
+  # end
+  #
+  # do_stuff(bar) if condition
+  Enabled: false
+
+Style/OptionalArguments:
+  # Sometimes you want to show the object type of the variable
+  # def foo(a = {}}, b, c)
+  # end
+  Enabled: false
+
+Style/ParenthesesAroundCondition:
+  # Helps readablility in some cases
+  Enabled: false
+
+Style/RegexpLiteral:
+  EnforcedStyle: mixed
+  AllowInnerSlashes: true
+
+Style/RescueModifier:
+  # One line rescue is okay in some scenarios
+  Enabled: false
+  
+Style/StringLiterals:
+  Exclude:
+    - 'spec/**/*'
