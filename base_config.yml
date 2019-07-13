@@ -13,7 +13,7 @@ Metrics/ModuleLength:
 
 Metrics/MethodLength:
   CountComments: false  # count full line comments?
-  Max: 30 # Default 10
+  Max: 50 # Default 10
 
 Metrics/BlockLength:
   Exclude:
