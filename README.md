@@ -1,4 +1,4 @@
-# Initial app setup
+# To add Rubocop to a new Ruby App
 - Add to development block: `gem 'rubocop', '~> 0.72.0', require: false`
 - bundle
 - create .rubocop.yml at the root directory
