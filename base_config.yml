@@ -67,6 +67,9 @@ Rails/Blank:
 Rails/Date:
   # Date.today is acceptable
   Enabled: false
+  
+Rails/FindBy:
+  Enabled: false
 
 Rails/Output:
   # Sometimes you want puts statements to output to console

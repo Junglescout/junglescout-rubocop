@@ -4,7 +4,7 @@ require:
  
 inherit_from:
   - .rubocop_todo.yml
-  - https://bitbucket.org/alan_maule/junglescout-rubocop/raw/master/base_config.yaml
+  - https://raw.githubusercontent.com/Junglescout/junglescout-rubocop/master/base_config.yml
   - .rubocop_app_overrides.yml
 
 # NOTE: VERY IMPORTANT
